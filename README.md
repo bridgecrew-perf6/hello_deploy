@@ -108,6 +108,15 @@
   Por esa razón ya se integró bootstrap en su aplicación, para trabajar con estas clases por lo que no tendría sentido utilizar las clases que tiene phoenix.
 
 
+# Deploy
+
+# Prod
+  1. Gen secret key
+  2. mix deps.get --only prod
+  3. MIX_ENV=prod mix compile
+  4. MIX_ENV=prod mix assets.deploy
+  5. PORT=4000 MIX_ENV=prod mix phx.server
+  5.1 PORT=4000 MIX_ENV=prod elixir --erl "-detached" -S mix phx.server
 ## Learn more
 
   * Official website: https://www.phoenixframework.org/
