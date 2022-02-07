@@ -12,17 +12,17 @@
   <body>
     <header>
       <section class="container">
-        <div class="row">
+        <div class="row mt-4">
           <div class="col-8">
-            <a href="https://phoenixframework.org/" class="img-fluid">
-            <img src={Routes.static_path(@conn, "/images/phoenix.png")} alt="Phoenix Framework Logo"/>
+            <a href="https://phoenixframework.org/">
+            <img class="img-fluid w-75" src={Routes.static_path(@conn, "/images/phoenix.png")} alt="Phoenix Framework Logo"/>
             </a>
           </div>
           <div class="col-4 text-end">
             <ul class="list-group">
-              <li class="list-item"><a class="d-block" href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
+              <li class="list-group-numbered"><a class="d-block text-decoration-none" href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
               <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
-                <li class="list-item"><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home), class: "d-block" %></li>
+                <li class="list-group-numbered"><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home), class: "d-block text-decoration-none" %></li>
               <% end %>
             </ul>
           </div>
