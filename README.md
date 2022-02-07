@@ -4,11 +4,11 @@
 
   Para esta app prueba se compilaran estilos scss utilizando la última version de bootstrap asi como compilar estilos que queramos añadir.
 
-  Los pasos son los sigueintes.
+  Los pasos son los siguientes.
 
 ## Instalar bootstrap
 
-  Dentro de nuestra aplicación se tiene una carpeta llamada assets, nos colocaremos dentro de ella y posteriormente haremos la instalaión de bootstrap mediante NPM creando un archivo packege.json.
+  Dentro de nuestra aplicación se tiene una carpeta llamada assets, nos colocaremos dentro de ella y posteriormente haremos la instalación de bootstrap mediante NPM creando un archivo package.json.
 
   ```
   $ cd assets
@@ -61,7 +61,7 @@
 
   Este paso es para indicar que versión queremos usar en nuestra configuración del archivo `config/config.exs`
 
-  Solo debemos agregar la siguiente linea de codigo con la ultima versión actualmente:
+  Solo debemos agregar la siguiente línea de código con la última versión actualmente:
   ```
   config :dart_sass,
   version: "1.43.1",
@@ -71,7 +71,7 @@
   ]
   ```
 
-## Agregar wtcher de Sass
+## Agregar watcher de Sass
 
   Debemos de agregar dentro del watcher de nuestra app en el archivo  `config/dev.exs` debajo del watcher de esbulid.
 
@@ -83,7 +83,7 @@
   ]
   ```
 
-## Creación de css en prodcción
+## Creación de css en producción
 
   Finalmente debemos de modificar la mix task de "assets.deploy" dentro del archivo `mix.exs` en los aliases.
   ```
@@ -98,6 +98,15 @@
     "phx.digest"
   ]
   ```
+
+## Compilación de estos estilos
+
+  Una vez creada la mix task corremos el comando: ` mix assets.deploy `
+  
+## Recomendación importante
+  Si solo desea utilizar los estilos de bootstrap se deben de eliminar los estilos que tiene Phoenix por defecto en los archivos `app.css ` y `phoenix.css`, despues en el archivo `app.js` quitar la importación de `app.css` porque esto hará colisionar en las clases y el llamado de los estilos.
+  Por esa razón ya se integró bootstrap en su aplicación, para trabajar con estas clases por lo que no tendría sentido utilizar las clases que tiene phoenix.
+
 
 ## Learn more
 
