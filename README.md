@@ -18,7 +18,7 @@
 
 ## Incluir bootstrap de los node_modules dentro de assets de la app
 
-  Dentro de assets crearemos un archivo .scss llamado:  
+  Dentro de assets/css crearemos un archivo .scss llamado:  
   ``` 
   app.scss  
   ``` 
