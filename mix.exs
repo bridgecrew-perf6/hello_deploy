@@ -50,6 +50,7 @@ defmodule HelloDeploy.MixProject do
       {:jason, "~> 1.2"},
       {:ex_doc, "~> 0.27", only: :dev, runtime: false},
       {:plug_cowboy, "~> 2.5"},
+      {:master_proxy, "~> 0.1"},
       {:dart_sass, "~> 0.2", runtime: Mix.env() == :dev}
     ]
   end
@@ -66,7 +67,7 @@ defmodule HelloDeploy.MixProject do
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
-      "assets.deploy": ["esbuild default --minify", "sass default --no-source-map --style=compressed", "phx.digest"]
+      "assets.deploy": ["sass default --no-source-map --style=compressed", "esbuild default --minify", "phx.digest"]
     ]
   end
 end
