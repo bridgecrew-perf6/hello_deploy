@@ -110,6 +110,8 @@
 
 # Deploy
 
+  https://hellodeploy.herokuapp.com/ | https://git.heroku.com/hellodeploy.git
+
 # Prod
   1. Gen secret key
   2. mix deps.get --only prod

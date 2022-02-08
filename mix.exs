@@ -50,7 +50,6 @@ defmodule HelloDeploy.MixProject do
       {:jason, "~> 1.2"},
       {:ex_doc, "~> 0.27", only: :dev, runtime: false},
       {:plug_cowboy, "~> 2.5"},
-      {:master_proxy, "~> 0.1"},
       {:dart_sass, "~> 0.2", runtime: Mix.env() == :dev}
     ]
   end

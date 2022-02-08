@@ -17,6 +17,15 @@ config :hello_deploy, HelloDeployWeb.Endpoint,
   pubsub_server: HelloDeploy.PubSub,
   live_view: [signing_salt: "UqaEEzAV"]
 
+# Configure master_proxy
+#config :master_proxy,
+#http: [port: PORT],
+#backends: [
+#  %{
+#    host: ~r{^hellodeploy\.com$},
+#    phoenix_endpoint: HelloDeployWeb.Endpoint
+#  }
+#]
 # Configures the mailer
 #
 # By default it uses the "Local" adapter which stores the emails
