@@ -2,12 +2,17 @@ import Config
 
 # Configure your database
 config :hello_deploy, HelloDeploy.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "hello_deploy_dev",
+  #username: "postgres",
+  #password: "postgres",
+  #hostname: "localhost",
+  #database: "hello_deploy",
   show_sensitive_data_on_connection_error: true,
-  pool_size: 10
+  pool_size: 10,
+
+  username: System.get_env("PSQL_USERNAME"),
+  password: System.get_env("PSQL_PASSWORD"),
+  database: System.get_env("PSQL_DATABASE"),
+  hostname: System.get_env("PSQL_HOSTNAME")
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
